@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper>
+    <name>Ubuntu 13.04 Community Wallpapers</name>
+    <filename>/usr/share/backgrounds/contest/raring.xml</filename>
+    <options>zoom</options>
+  </wallpaper>
+</wallpapers>

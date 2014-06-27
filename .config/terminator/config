@@ -1,0 +1,28 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  sticky = True
+  suppress_multiple_term_dialog = True
+  borderless = True
+  title_transmit_bg_color = "#483978"
+  tab_position = hidden
+[keybindings]
+  cycle_prev = <Shift>KP_Right
+  go_up = <Alt>K
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+  go_down = <Alt>J
+  close_term = <Primary><Shift>w
+  cycle_next = <Shift>KP_Page_Up
+  go_right = <Alt>L
+  go_left = <Alt>H
+  copy = <Ctrl>C
+  paste = <Ctrl>V
+[profiles]
+  [[default]]
+    background_darkness = 0.93
+    background_image = None
+    background_type = transparent
+    foreground_color = "#ffffff"
+[layouts]
+  [[default]]
+[plugins]

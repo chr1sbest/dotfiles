@@ -1,0 +1,43 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  sticky = True
+  suppress_multiple_term_dialog = True
+  borderless = True
+  title_transmit_bg_color = "#483978"
+  tab_position = hidden
+[keybindings]
+  next_tab = <Ctrl>Tab
+  prev_tab = <Ctrl><Shift>Tab
+  close_term = <Ctrl>W
+  copy = <Ctrl>C
+  paste = <Ctrl>V
+[profiles]
+  [[default]]
+    background_image = None
+    background_type = transparent
+    foreground_color = "#ffffff"
+    background_darkness = 0.82
+[layouts]
+  [[default]]
+    [[[child0]]]
+      position = 683:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 683, 790
+    [[[child1]]]
+      position = 341
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[terminal3]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+[plugins]
