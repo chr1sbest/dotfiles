@@ -1,4 +1,5 @@
 dotfiles
 ========
 
-configurations for bash, vim, terminator, etc. &amp; shell script to symlink them to home directory.
+-Configurations for bash, vim, terminator, etc.
+-Shell script to symlink .files to .files in home directory.

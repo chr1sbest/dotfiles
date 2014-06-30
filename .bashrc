@@ -196,4 +196,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="~/applications/sbt/bin:$PATH"
 export PATH="~/Downloads/scala-2.9.3/bin:$PATH"
 
+#wallpapers
+alias wallpaper='python /home/chris/workspace/scripts/background-switcher.py'
 
