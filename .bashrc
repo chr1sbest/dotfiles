@@ -197,5 +197,7 @@ export PATH="~/applications/sbt/bin:$PATH"
 export PATH="~/Downloads/scala-2.9.3/bin:$PATH"
 
 #wallpapers
-alias wallpaper='python /home/chris/workspace/scripts/background-switcher.py'
+alias wallpaper='python /home/chris/dotfiles/scripts/wallpaper-switcher.py'
 
+#gistit
+export GISTIT_TOKEN="d9578c98db1f8e7d190f9ba1d0b95d53af83e7b4"

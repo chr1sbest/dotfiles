@@ -17,6 +17,10 @@ set tags=./tags;/
 set splitright
 set splitbelow
 
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+
 "Advanced Configs
 set autoindent 
 set cindent 
