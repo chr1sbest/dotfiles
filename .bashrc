@@ -169,16 +169,7 @@ alias keyoff='xinput set-int-prop 13 "Device Enabled" 8 0'
 alias keyon='xinput set-int-prop 13 "Device Enabled" 8 0'
 alias variety='~/../../opt/extras.ubuntu.com/variety/bin/variety'
 alias wallpaper='variety -n'
-
-#task manager aliases
-alias tasks='python ~/workspace/taskmaster/tasks.py'
-alias add='tasks add'
-alias fin='tasks fin'
-alias undo='tasks undo'
-alias name='tasks name'
-alias move='tasks move'
-
-alias incomplete='python ~/workspace/taskmaster/incomplete.py'
+alias copy='xclip -selection clipboard'
 
 #virtualenv
 export WORKON_HOME="$HOME/.virtualenvs" 
@@ -187,10 +178,6 @@ alias iriver="workon intelriver; cdvirtualenv; cl dashboard"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-#greeting
-#python ~/workspace/taskmaster/greeting.py
-#tasks
 
 ### SBT ###
 export PATH="~/applications/sbt/bin:$PATH"
