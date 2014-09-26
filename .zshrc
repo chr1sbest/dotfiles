@@ -80,12 +80,13 @@ export PATH="/home/chris/bin:~/Downloads/scala-2.9.3/bin:~/applications/sbt/bin:
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-#bash aliases
+#aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-function mkcd {  #make dir and cd into it
+function mkcd {
+  # Make dir and CD into it
   if [ ! -n "$1" ]; then
     echo "Enter a directory name"
   elif [ -d $1 ]; then
@@ -95,10 +96,11 @@ function mkcd {  #make dir and cd into it
   fi
 }
 
-function cl()
-{
-     builtin cd "$*" && ls -a
- }
+function copy {
+  # Copy to clipboard
+  cat $1 | xclip -selection clipboard
+}
+
 
 #intelRiver SSH Settings
 export EC2_KEYPAIR=intelriver
@@ -125,8 +127,7 @@ alias switch='git checkout'
 alias keyoff='xinput set-int-prop 13 "Device Enabled" 8 0'
 alias keyon='xinput set-int-prop 13 "Device Enabled" 8 0'
 alias variety='~/../../opt/extras.ubuntu.com/variety/bin/variety'
-alias wallpaper='variety -n'
-alias copy='xclip -selection clipboard'
+alias wallpaper='python /home/chris/dotfiles/scripts/wallpaper-switcher.py'
 
 #virtualenv
 export WORKON_HOME="$HOME/.virtualenvs" 
@@ -143,8 +144,5 @@ export PATH="~/Downloads/scala-2.9.3/bin:$PATH"
 ### Exercism ###
 export PATH="/home/chris/bin:$PATH"
 
-#wallpapers
-alias wallpaper='python /home/chris/dotfiles/scripts/wallpaper-switcher.py'
-
-#gistit
+### Gistit ###
 export GISTIT_TOKEN="d9578c98db1f8e7d190f9ba1d0b95d53af83e7b4"
