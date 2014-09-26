@@ -183,6 +183,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="~/applications/sbt/bin:$PATH"
 export PATH="~/Downloads/scala-2.9.3/bin:$PATH"
 
+### Exercism ###
+export PATH="/home/chris/bin:$PATH"
+
 #wallpapers
 alias wallpaper='python /home/chris/dotfiles/scripts/wallpaper-switcher.py'
 
