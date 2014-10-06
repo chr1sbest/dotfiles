@@ -16,6 +16,7 @@ set scrolloff=4
 set tags=./tags;/
 set splitright
 set splitbelow
+syntax on
 
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
