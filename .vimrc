@@ -18,6 +18,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
+Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
 
 "Aesthetics
 Plugin 'flazz/vim-colorschemes'
@@ -58,6 +60,9 @@ autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype coffee setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
+"Advanced Settings
+nmap <c-a> :TagbarToggle<CR>
+let g:ctrlp_show_hidden = 1
 filetype on
 filetype plugin on
 filetype indent on
