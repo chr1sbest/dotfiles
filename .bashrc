@@ -167,8 +167,6 @@ alias melatonin='dim 10 & redshift&'
 alias switch='git checkout'
 alias keyoff='xinput set-int-prop 13 "Device Enabled" 8 0'
 alias keyon='xinput set-int-prop 13 "Device Enabled" 8 0'
-alias variety='~/../../opt/extras.ubuntu.com/variety/bin/variety'
-alias wallpaper='variety -n'
 alias copy='xclip -selection clipboard'
 
 #virtualenv
@@ -191,3 +189,16 @@ alias wallpaper='python /home/chris/dotfiles/scripts/wallpaper-switcher.py'
 
 #gistit
 export GISTIT_TOKEN="d9578c98db1f8e7d190f9ba1d0b95d53af83e7b4"
+
+# Force sync with NTP Server
+function update-time {
+    sudo service ntp stop
+    sudo ntpdate -s time.nist.gov
+    sudo service ntp start
+}
+
+# Open DecisionNext virtual environment
+function cddn {
+    workon decisionnext
+    cdvirtualenv
+}

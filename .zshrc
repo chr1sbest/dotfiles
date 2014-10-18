@@ -146,3 +146,19 @@ export PATH="/home/chris/bin:$PATH"
 
 ### Gistit ###
 export GISTIT_TOKEN="d9578c98db1f8e7d190f9ba1d0b95d53af83e7b4"
+
+# Force sync with NTP Server
+function update-time {
+    sudo service ntp stop
+    sudo ntpdate -s time.nist.gov
+    sudo service ntp start
+}
+
+# Open DecisionNext virtual environment
+function cdn {
+    workon decisionnext
+    cdvirtualenv
+}
+
+#Go
+export PATH=$PATH:/usr/local/go/bin
