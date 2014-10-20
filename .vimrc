@@ -67,6 +67,7 @@ filetype indent on
 nnoremap ; :
 inoremap jk  <esc>
 let mapleader = " "
+map <C-b> :NERDTreeToggle<CR>
 
 "Save Hotkey
 :nmap <c-s> :w<CR>
@@ -86,10 +87,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "Chrome-like navigation
-nnoremap <C-b> :tabprevious<CR>
+nnoremap <C-N> :tabprevious<CR>
 nnoremap <C-n> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
-inoremap <C-p> <Esc>:tabprevious<CR>i
+inoremap <C-N> <Esc>:tabprevious<CR>i
 inoremap <C-n> <Esc>:tabnext<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
 
