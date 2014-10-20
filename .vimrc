@@ -52,8 +52,6 @@ set cindent
 set expandtab
 set encoding=utf-8
 set noshowmode
-syntax on
-colorscheme badwolf
 
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
@@ -107,6 +105,9 @@ nnoremap <silent> p p`]
 :set pt=<f9>
 
 "Airline and ColorScheme"
+syntax on
+colorscheme badwolf
+hi Normal ctermbg=NONE
 set laststatus=2
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10 
 let g:airline_theme = 'airlineish'
