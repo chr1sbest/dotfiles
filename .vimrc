@@ -59,6 +59,7 @@ autocmd Filetype coffee setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 "Advanced Settings
+let mapleader = " "
 nmap <c-a> :TagbarToggle<CR>
 let g:ctrlp_show_hidden = 1
 filetype on
@@ -66,8 +67,7 @@ filetype plugin on
 filetype indent on
 nnoremap ; :
 inoremap jk  <esc>
-let mapleader = " "
-map <C-b> :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 
 "Save Hotkey
 :nmap <c-s> :w<CR>
