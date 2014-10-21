@@ -65,8 +65,8 @@ nnoremap ; :
 inoremap jk  <esc>
 let mapleader = " "
 nmap <leader>b :NERDTreeTabsToggle<CR>
-nmap <leader>m :SyntasticCheck<CR>
-nmap <leader>n :TagbarToggle<CR>
+nmap <leader>n :SyntasticCheck<CR>
+nmap <leader>m :TagbarToggle<CR>
 let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
