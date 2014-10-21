@@ -12,6 +12,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 
 "Specific
 Plugin 'Raimondi/delimitMate'
@@ -71,6 +72,9 @@ inoremap jk  <esc>
 nmap <leader>n :NERDTreeTabsToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
+let g:syntastic_mode_map = {'mode': 'passive','active_filetypes': [], 'passive_filetypes': []}
+nnoremap <leader>s :SyntasticCheck<CR>
+au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 "Save Hotkey
 :nmap <c-s> :w<CR>
