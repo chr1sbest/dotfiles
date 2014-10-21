@@ -64,9 +64,9 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 nnoremap ; :
 inoremap jk  <esc>
 let mapleader = " "
-nmap <leader>b :TagbarToggle<CR>
-nmap <leader>n :NERDTreeTabsToggle<CR>
+nmap <leader>b :NERDTreeTabsToggle<CR>
 nmap <leader>m :SyntasticCheck<CR>
+nmap <leader>n :TagbarToggle<CR>
 let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
