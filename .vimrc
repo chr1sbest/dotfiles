@@ -69,6 +69,8 @@ filetype indent on
 nnoremap ; :
 inoremap jk  <esc>
 nmap <leader>n :NERDTreeTabsToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.DS_Store$']
 
 "Save Hotkey
 :nmap <c-s> :w<CR>
