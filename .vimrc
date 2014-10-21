@@ -8,10 +8,10 @@ call vundle#begin()
 "Core
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
+Plugin 'scrooloose/nerdtree'
 
 "Specific
 Plugin 'Raimondi/delimitMate'
@@ -20,6 +20,7 @@ Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 "Aesthetics
 Plugin 'flazz/vim-colorschemes'
@@ -67,7 +68,7 @@ filetype plugin on
 filetype indent on
 nnoremap ; :
 inoremap jk  <esc>
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeTabsToggle<CR>
 
 "Save Hotkey
 :nmap <c-s> :w<CR>
