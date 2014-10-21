@@ -61,19 +61,19 @@ autocmd Filetype coffee setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 "Advanced Settings
-let mapleader = " "
-nmap <c-a> :TagbarToggle<CR>
-let g:ctrlp_show_hidden = 1
-filetype on
-filetype plugin on
-filetype indent on
 nnoremap ; :
 inoremap jk  <esc>
+let mapleader = " "
+nmap <leader>b :TagbarToggle<CR>
 nmap <leader>n :NERDTreeTabsToggle<CR>
+nmap <leader>m :SyntasticCheck<CR>
+let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
 let g:syntastic_mode_map = {'mode': 'passive','active_filetypes': [], 'passive_filetypes': []}
-nnoremap <leader>s :SyntasticCheck<CR>
+filetype on
+filetype plugin on
+filetype indent on
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 "Save Hotkey
