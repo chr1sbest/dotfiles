@@ -1,4 +1,4 @@
-" Vundle Package Management
+"Vundle Package Management
 set nocompatible
 filetype off
 
@@ -8,20 +8,22 @@ call vundle#begin()
 "Core
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+
+"Extra
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-
-"Specific
+Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
+
+"Language
 Plugin 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
-Plugin 'tpope/vim-fugitive'
-Plugin 'majutsushi/tagbar'
-Plugin 'airblade/vim-gitgutter'
-Bundle 'jistr/vim-nerdtree-tabs'
 
 "Aesthetics
 Plugin 'flazz/vim-colorschemes'
@@ -54,27 +56,14 @@ set cindent
 set expandtab
 set encoding=utf-8
 set noshowmode
+nnoremap ; :
+inoremap jk  <esc>
+let mapleader = " "
 
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype coffee setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
-
-"Advanced Settings
-nnoremap ; :
-inoremap jk  <esc>
-let mapleader = " "
-nmap <leader>b :NERDTreeTabsToggle<CR>
-nmap <leader>n :SyntasticCheck<CR>
-nmap <leader>m :TagbarToggle<CR>
-let g:ctrlp_show_hidden = 1
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.DS_Store$']
-let g:syntastic_mode_map = {'mode': 'passive','active_filetypes': [], 'passive_filetypes': []}
-filetype on
-filetype plugin on
-filetype indent on
-au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 "Save Hotkey
 :nmap <c-s> :w<CR>
@@ -111,6 +100,19 @@ nnoremap <silent> p p`]
 
 "Paste toggle"
 :set pt=<f9>
+
+"Plugin Settings
+nmap <leader>b :NERDTreeTabsToggle<CR>
+nmap <leader>n :SyntasticCheck<CR>
+nmap <leader>m :TagbarToggle<CR>
+let g:ctrlp_show_hidden = 1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.DS_Store$']
+let g:syntastic_mode_map = {'mode': 'passive','active_filetypes': [], 'passive_filetypes': []}
+filetype on
+filetype plugin on
+filetype indent on
+au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 "Airline and ColorScheme"
 syntax on
