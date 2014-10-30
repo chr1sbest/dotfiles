@@ -65,24 +65,19 @@ autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype coffee setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
-"Save Hotkey
-:nmap <c-s> :w<CR>
-:imap <c-s> <Esc>:w<CR>a
-:imap <c-s> <Esc><c-s>
-
 "Move Cursor By Lines
 nnoremap j gj
 nnoremap k gk
 nnoremap H 0
 nnoremap L $
 
-"Change ctrl+hjkl keys to switch between windows
+"Change ctrl+hjkl keys to switch between splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"Chrome-like navigation
+"Chrome-like tab instantiation. n/b to move next/previous
 nnoremap <C-N> :tabprevious<CR>
 nnoremap <C-b> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
@@ -124,7 +119,6 @@ let g:airline_theme = 'airlineish'
 if !exists("g:airline_symbols")
       let g:airline_symbols = {}
 endif
-
 let g:airline_theme="powerlineish"
 let g:airline_powerline_fonts=1
 let g:airline_section_warning = airline#section#create([ "syntastic" ])
