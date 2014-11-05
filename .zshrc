@@ -159,6 +159,8 @@ function update-time {
 function cdn {
     workon decisionnext
     cdvirtualenv
+    deactivate
+    cd chris
 }
 
 #Go

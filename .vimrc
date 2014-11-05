@@ -94,11 +94,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "Chrome-like navigation
-nnoremap <C-N> :tabprevious<CR>
-nnoremap <C-b> :tabnext<CR>
+nnoremap <C-b> :tabprevious<CR>
+nnoremap <C-n> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
-inoremap <C-N> <Esc>:tabprevious<CR>i
-inoremap <C-b> <Esc>:tabnext<CR>i
+inoremap <C-b> <Esc>:tabprevious<CR>i
+inoremap <C-n> <Esc>:tabnext<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
 
 "Press enter to get rid of highlighted text after search
