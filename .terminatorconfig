@@ -20,10 +20,12 @@
 [profiles]
   [[default]]
     use_system_font = False
-    background_darkness = 0.73
+    background_darkness = 0.87
     background_type = transparent
     background_image = None
     foreground_color = "#ffffff"
+    icon_bell = False
+    show_titlebar = False
     font = DejaVu Sans Mono for Powerline 10
     scrollback_infinite = True
 [layouts]

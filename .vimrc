@@ -1,6 +1,5 @@
 "Vundle Package Management
-set nocompatible
-filetype off
+set nocompatible filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -112,7 +111,9 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 "Airline and ColorScheme"
 syntax on
 colorscheme badwolf
-hi Normal ctermbg=NONE
+hi Normal ctermbg=None
+hi NonText ctermbg=None
+hi LineNr ctermbg=None
 set laststatus=2
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10 
 let g:airline_theme = 'airlineish'
