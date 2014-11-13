@@ -26,7 +26,7 @@ Plugin 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
 
 "Aesthetics
-Plugin 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes' 
 Plugin 'bling/vim-airline'
 Plugin 'paranoida/vim-airlineish'
 
@@ -49,8 +49,6 @@ set hidden
 set wildmenu
 set scrolloff=4
 set tags=./tags;/
-set splitright
-set splitbelow
 set autoindent
 set cindent
 set expandtab
@@ -71,15 +69,19 @@ nnoremap k gk
 nnoremap H 0
 nnoremap L $
 
-"Change ctrl+hjkl keys to switch between splits
+"Split settings
+set splitright
+set splitbelow
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <Leader>k <C-W><bar>
+nnoremap <Leader>j <C-W>=
 
 "Chrome-like tab instantiation. n/b to move next/previous
-nnoremap <C-N> :tabprevious<CR>
-nnoremap <C-b> :tabnext<CR>
+nnoremap <C-b> :tabprevious<CR>
+nnoremap <C-n> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
 inoremap <C-b> <Esc>:tabprevious<CR>i
 inoremap <C-n> <Esc>:tabnext<CR>i
@@ -93,7 +95,7 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-"Paste toggle"
+"Clipboard Paste toggle"
 :set pt=<f9>
 
 "Plugin Settings
