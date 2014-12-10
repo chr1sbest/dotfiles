@@ -155,12 +155,22 @@ function update-time {
     sudo service ntp start
 }
 
-# Open DecisionNext virtual environment
+# DecisionNext Aliases
 function cdn {
     workon decisionnext
     cdvirtualenv
     deactivate
     cd chris
+}
+function dnscp {
+    cd /home/chris/.virtualenvs/decisionnext/scripts
+    export PYTHONPATH=/home/chris/.virtualenvs/decisionnext/chris
+    ./scp_to_dndev.sh $1 $2
+}
+function dnssh {
+    cd /home/chris/.virtualenvs/decisionnext/scripts/
+    export PYTHONPATH=/home/chris/.virtualenvs/decisionnext/chris
+    ./ssh_to_dndev.sh
 }
 
 #Go
