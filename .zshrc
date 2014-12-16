@@ -155,23 +155,10 @@ function update-time {
     sudo service ntp start
 }
 
-# DecisionNext Aliases
-function cdn {
-    workon decisionnext
-    cdvirtualenv
-    deactivate
-    cd chris
-}
-function dnscp {
-    cd /home/chris/.virtualenvs/decisionnext/scripts
-    export PYTHONPATH=/home/chris/.virtualenvs/decisionnext/chris
-    ./scp_to_dndev.sh $1 $2
-}
-function dnssh {
-    cd /home/chris/.virtualenvs/decisionnext/scripts/
-    export PYTHONPATH=/home/chris/.virtualenvs/decisionnext/chris
-    ./ssh_to_dndev.sh
-}
-
 #Go
 export PATH=$PATH:/usr/local/go/bin
+
+# DecisionNext Aliases
+alias dnscp=/home/chris/.virtualenvs/decisionnext/scripts/scp_to_dndev.sh
+alias dnssh=/home/chris/.virtualenvs/decisionnext/scripts/ssh_to_dndev.sh
+alias cdn="cd /home/chris/.virtualenvs/decisionnext/chris/" 
