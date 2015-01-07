@@ -17,7 +17,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Raimondi/delimitMate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 
@@ -109,7 +108,6 @@ let g:syntastic_mode_map = {'mode': 'passive','active_filetypes': [], 'passive_f
 filetype on
 filetype plugin on
 filetype indent on
-au FileType python let b:delimitMate_nesting_quotes = ['"']
 
 "Airline and ColorScheme"
 syntax on
