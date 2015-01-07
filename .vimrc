@@ -19,6 +19,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
+Plugin 'vim-scripts/camelcasemotion'
 
 "Language
 Plugin 'Blackrush/vim-gocode'
@@ -98,8 +99,14 @@ nnoremap <silent> p p`]
 :set pt=<f9>
 
 "Plugin Settings
-nmap <leader>b :NERDTreeTabsToggle<CR>
-nmap <leader>n :SyntasticCheck<CR>
+map W <Plug>CamelCaseMotion_w 
+map B h<Plug>CamelCaseMotion_b 
+map E <Plug>CamelCaseMotion_e 
+sunmap W
+sunmap B
+sunmap E
+nmap <leader>n :NERDTreeTabsToggle<CR>
+nmap <leader>v :SyntasticCheck<CR>
 nmap <leader>m :TagbarToggle<CR>
 let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
