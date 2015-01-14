@@ -155,13 +155,12 @@ function update-time {
     sudo service ntp start
 }
 
-# Open DecisionNext virtual environment
-function cdn {
-    workon decisionnext
-    cdvirtualenv
-    deactivate
-    cd chris
-}
-
 #Go
 export PATH=$PATH:/usr/local/go/bin
+
+# DecisionNext Aliases
+alias dnscp=/home/chris/.virtualenvs/decisionnext/scripts/scp_to_dndev.sh
+alias dnssh=/home/chris/.virtualenvs/decisionnext/scripts/ssh_to_dndev.sh
+alias update_egg=/home/chris/.virtualenvs/decisionnext/scripts/latest_dndev_egg.sh
+alias dnwatcher="bash /home/chris/.virtualenvs/decisionnext/scripts/scp_daemon.sh"
+alias cdn="cd /home/chris/.virtualenvs/decisionnext/" 
