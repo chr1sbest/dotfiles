@@ -95,7 +95,7 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-"Clipboard Paste toggle"
+"Clipboard Paste toggle
 :set pt=<f9>
 
 "Plugin Settings
@@ -133,3 +133,9 @@ let g:airline#extensions#tabline#enabled       =  1
 let g:airline#extensions#tabline#tab_nr_type   =  1 " tab number
 let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
 let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
+
+"Colorcolumn
+highlight ColorColumn ctermbg=magenta
+augroup longLines
+    autocmd! BufEnter *.py,.vimrc,*.sh,*.c* :match ColorColumn /\%>80v.\+/
+augroup END
