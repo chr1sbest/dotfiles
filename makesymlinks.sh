@@ -47,3 +47,4 @@ done
 # - xclip
 # - compizconfig-settings-manager
 # - VLC
+# - redshift
