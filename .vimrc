@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/camelcasemotion'
+Plugin 'rhysd/clever-f.vim'
 
 "Language
 Plugin 'Blackrush/vim-gocode'
