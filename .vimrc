@@ -24,6 +24,7 @@ Plugin 'vim-scripts/camelcasemotion'
 "Language
 Plugin 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
+Plugin 'digitaltoad/vim-jade'
 
 "Aesthetics
 Plugin 'flazz/vim-colorschemes' 
@@ -61,13 +62,18 @@ let mapleader = " "
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype coffee setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype jade setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
-"Move Cursor By Lines
-nnoremap j gj
-nnoremap k gk
-nnoremap H 0
-nnoremap L $
+"Move cursor ignoring line wrapping
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> gj (v:count == 0 ? 'j' : 'gj')
+nnoremap <expr> gk (v:count == 0 ? 'k' : 'gk')
+
+"Quickly move to beginning and end of line
+map H 0
+map L $
 
 "Split settings
 set splitright
@@ -80,12 +86,12 @@ nnoremap <Leader>k <C-W><bar>
 nnoremap <Leader>j <C-W>=
 
 "Chrome-like tab instantiation. n/b to move next/previous
+nnoremap <C-t> :tabnew<CR>
 nnoremap <C-b> :tabprevious<CR>
 nnoremap <C-n> :tabnext<CR>
-nnoremap <C-t> :tabnew<CR>
+inoremap <C-t> <Esc>:tabnew<CR>
 inoremap <C-b> <Esc>:tabprevious<CR>i
 inoremap <C-n> <Esc>:tabnext<CR>i
-inoremap <C-t> <Esc>:tabnew<CR>
 
 "Press enter to get rid of highlighted text after search
 nnoremap <CR> :noh<CR><CR>
@@ -112,9 +118,6 @@ let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
 let g:syntastic_mode_map = {'mode': 'passive','active_filetypes': [], 'passive_filetypes': []}
-filetype on
-filetype plugin on
-filetype indent on
 
 "Airline and ColorScheme"
 syntax on
