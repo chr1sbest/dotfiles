@@ -97,16 +97,15 @@ function mkcd {
   fi
 }
 
+# Copy to clipboard
 function copy {
-  # Copy to clipboard
   cat $1 | xclip -selection clipboard
 }
 
+#Go
+export PATH=$PATH:/usr/local/go/bin
 
-#intelRiver SSH Settings
-export EC2_KEYPAIR=intelriver
-export EC2_URL=https://ec2.us-west-2.amazonaws.com
-export EC2_PRIVATE_KEY=~/intelriver.pem
+#JAVA
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
 
 #Custom aliases
@@ -133,7 +132,6 @@ alias wallpaper='python /home/chris/dotfiles/scripts/wallpaper-switcher.py'
 #virtualenv
 export WORKON_HOME="$HOME/.virtualenvs" 
 source /usr/local/bin/virtualenvwrapper.sh 
-alias iriver="workon intelriver; cdvirtualenv; cl dashboard"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -148,19 +146,7 @@ export PATH="/home/chris/bin:$PATH"
 ### Gistit ###
 export GISTIT_TOKEN="d9578c98db1f8e7d190f9ba1d0b95d53af83e7b4"
 
-# Force sync with NTP Server
-function update-time {
-    sudo service ntp stop
-    sudo ntpdate -s time.nist.gov
-    sudo service ntp start
-}
-
-#Go
-export PATH=$PATH:/usr/local/go/bin
-
-# DecisionNext Aliases
-alias dnscp=/home/chris/.virtualenvs/decisionnext/scripts/scp_to_dndev.sh
-alias dnssh=/home/chris/.virtualenvs/decisionnext/scripts/ssh_to_dndev.sh
-alias update_egg=/home/chris/.virtualenvs/decisionnext/scripts/latest_dndev_egg.sh
-alias dnwatcher="bash /home/chris/.virtualenvs/decisionnext/scripts/scp_daemon.sh"
-alias cdn="cd /home/chris/.virtualenvs/decisionnext/" 
+# Add local aliases.
+if [ -f ~/.local_aliases ]; then
+    source ~/.local_aliases
+fi

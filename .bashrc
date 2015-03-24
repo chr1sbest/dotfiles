@@ -143,10 +143,6 @@ function cl()
      builtin cd "$*" && ls -a
  }
 
-#intelRiver SSH Settings
-export EC2_KEYPAIR=intelriver
-export EC2_URL=https://ec2.us-west-2.amazonaws.com
-export EC2_PRIVATE_KEY=~/intelriver.pem
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
 
 #Custom aliases
@@ -172,7 +168,6 @@ alias copy='xclip -selection clipboard'
 #virtualenv
 export WORKON_HOME="$HOME/.virtualenvs" 
 source /usr/local/bin/virtualenvwrapper.sh 
-alias iriver="workon intelriver; cdvirtualenv; cl dashboard"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
