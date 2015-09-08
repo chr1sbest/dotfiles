@@ -21,6 +21,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/camelcasemotion'
 Plugin 'rhysd/clever-f.vim'
+Plugin 'chase/vim-ansible-yaml'
 
 "Language
 Plugin 'Blackrush/vim-gocode'
@@ -144,7 +145,7 @@ let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
 let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
 
 "Colorcolumn
-highlight ColorColumn ctermbg=magenta
-augroup longLines
-    autocmd! BufEnter *.py,.vimrc,*.sh,*.c* :match ColorColumn /\%>80v.\+/
-augroup END
+" highlight ColorColumn ctermbg=magenta
+" augroup longLines
+"     autocmd! BufEnter *.py,.vimrc,*.sh,*.c* :match ColorColumn /\%>80v.\+/
+" augroup END

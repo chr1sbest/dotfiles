@@ -106,7 +106,7 @@ function copy {
 export PATH=$PATH:/usr/local/go/bin
 
 #JAVA
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/
 
 #Custom aliases
 alias 61b="cd ~/workspace/61b"
