@@ -7,23 +7,22 @@ call vundle#begin()
 
 "Core
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+
+"Navigation
+Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
-
-"Extra
+Plugin 'vim-scripts/camelcasemotion'
+Plugin 'rhysd/clever-f.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'majutsushi/tagbar'
-Plugin 'vim-scripts/camelcasemotion'
-Plugin 'rhysd/clever-f.vim'
-Plugin 'terryma/vim-expand-region'
 
-"Language
+"Language Specific
 Plugin 'Blackrush/vim-gocode'
 Plugin 'fatih/vim-go'
 Plugin 'digitaltoad/vim-jade'
@@ -124,10 +123,6 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
 
-"Visual mode region expanding
-map v <Plug>(expand_region_expand)
-map <C-v> <Plug>(expand_region_shrink)
-
 "Airline and ColorScheme"
 syntax on
 colorscheme badwolf
@@ -166,11 +161,11 @@ def set_breakpoint(breakpoint):
     white_spaces = re.search('^(\s*)', current_line).group(1)
     vim.current.buffer.append(white_spaces + breakpoint, breakpoint_line)
 
-def remove_breakpoints():
+def remove_all_breakpoints():
     op = 'g/^.*{}.*/d'.format(breakpoint_regex)
     vim.command(op)
 
 vim.command('map <leader>b :py set_breakpoint(ipdb_breakpoint)<cr>')
 vim.command('map <leader>r :py set_breakpoint(rpdb_breakpoint)<cr>')
-vim.command('map <leader>v :py remove_breakpoints()<cr>')
+#vim.command('map <leader>v :py remove_all_breakpoints()<cr>')
 EOF
