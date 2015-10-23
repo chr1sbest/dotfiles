@@ -150,3 +150,6 @@ export GISTIT_TOKEN="d9578c98db1f8e7d190f9ba1d0b95d53af83e7b4"
 if [ -f ~/.local_aliases ]; then
     source ~/.local_aliases
 fi
+
+# Vim as default editor
+export EDITOR=vim
