@@ -73,10 +73,6 @@ nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> gj (v:count == 0 ? 'j' : 'gj')
 nnoremap <expr> gk (v:count == 0 ? 'k' : 'gk')
 
-"Quickly move to beginning and end of line
-map H 0
-map L $
-
 "Split settings
 set splitright
 set splitbelow
