@@ -115,6 +115,8 @@ sunmap W
 sunmap B
 sunmap E
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_files=0
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$']
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
