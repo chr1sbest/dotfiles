@@ -1,0 +1,11 @@
+function ghist { git log -p "$1" }
+export -f ghist
+
+function open_files_containing { grep -r -l "$1" . | xargs -o vim -p }
+export -f open_files_containing
+
+function show_in_vim { git show --pretty="format:" --name-only | xargs -o vim -p }
+export -f show_in_vim
+
+function delete_tag { git push origin :"$1" && git tag -d "$1" }
+export -f delete_tag

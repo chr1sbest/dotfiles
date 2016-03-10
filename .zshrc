@@ -151,5 +151,11 @@ if [ -f ~/.local_aliases ]; then
     source ~/.local_aliases
 fi
 
+# Add functions.
+if [ -f ~/.zshfunctions ]; then
+    source ~/.zshfunctions
+    clear
+fi
+
 # Vim as default editor
 export EDITOR=vim
