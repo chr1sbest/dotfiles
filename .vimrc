@@ -32,6 +32,7 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'flazz/vim-colorschemes' 
 Plugin 'bling/vim-airline'
 Plugin 'paranoida/vim-airlineish'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
