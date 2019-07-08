@@ -8,6 +8,7 @@ call vundle#begin()
 "Core
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
 
 "Navigation
 Plugin 'vim-scripts/camelcasemotion'
