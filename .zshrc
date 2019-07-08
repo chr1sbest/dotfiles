@@ -162,3 +162,8 @@ export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+# Work
+alias cdpassport="cd ~/go/src/code.justin.tv/identity/passport"
+alias cdinterpol="cd ~/go/src/code.justin.tv/identity/interpol"
+alias cdowl="cd ~/go/src/code.justin.tv/identity/owl"
