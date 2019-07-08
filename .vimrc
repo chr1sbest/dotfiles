@@ -1,5 +1,5 @@
 "Vundle Package Management
-set nocompatible 
+set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,7 +24,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'chase/vim-ansible-yaml'
 
 "Aesthetics
-Plugin 'flazz/vim-colorschemes' 
+Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline'
 Plugin 'paranoida/vim-airlineish'
 Plugin 'vim-airline/vim-airline-themes'
