@@ -2,7 +2,7 @@
 # This script safely makes symlinks with dotfiles to keep all of my devices
 # in sync. Before overwrriting any existing dotfiles with our new symlinked
 # dotfiles, we make sure to move existing dotfiles into ~/dofiles_old
-configfiles=".bashrc .vimrc .gitconfig .zshrc .zshfunctions"
+configfiles=".bashrc .vimrc .fastvimrc .gitconfig .zshrc .zshfunctions"
 
 # Move any existing dotfiles in ~ to dotfiles_old directory and then create 
 # symlinks for all listed $configfiles from this dotfiles directory.

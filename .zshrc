@@ -155,6 +155,7 @@ fi
 
 # Vim as default editor
 export EDITOR=vim
+alias fvim="vim -u ~/.fastvimrc"
 
 # GOPATH
 export GOPATH=$HOME/go
