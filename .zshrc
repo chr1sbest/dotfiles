@@ -148,6 +148,8 @@ fi
 
 # Vim as default editor
 export EDITOR=vim
+
+# GOPATH
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
