@@ -2,11 +2,10 @@
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-256color
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="gallois"
+# Install pure prompt https://github.com/sindresorhus/pure
+# npm install --global pure-prompt
+autoload -U promptinit; promptinit
+prompt pure
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -129,10 +128,6 @@ alias keyon='xinput set-int-prop 13 "Device Enabled" 8 0'
 alias variety='~/../../opt/extras.ubuntu.com/variety/bin/variety'
 alias wallpaper='python /home/chris/dotfiles/scripts/wallpaper-switcher.py'
 
-#virtualenv
-export WORKON_HOME="$HOME/.virtualenvs" 
-source /usr/local/bin/virtualenvwrapper.sh 
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -151,11 +146,9 @@ if [ -f ~/.local_aliases ]; then
     source ~/.local_aliases
 fi
 
-# Add functions.
-if [ -f ~/.zshfunctions ]; then
-    source ~/.zshfunctions
-    clear
-fi
-
 # Vim as default editor
 export EDITOR=vim
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin

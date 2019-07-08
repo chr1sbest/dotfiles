@@ -7,15 +7,9 @@ call vundle#begin()
 
 "Core
 Plugin 'gmarik/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 
 "Navigation
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-scripts/camelcasemotion'
 Plugin 'rhysd/clever-f.vim'
 Plugin 'tpope/vim-surround'
@@ -107,8 +101,6 @@ nnoremap <silent> p p`]
 map q; :q
 
 "Plugin Settings
-nmap <leader>n :NERDTreeTabsToggle<CR>
-nmap <leader>m :TagbarToggle<CR>
 map W <Plug>CamelCaseMotion_w 
 map B h<Plug>CamelCaseMotion_b 
 map E <Plug>CamelCaseMotion_e 
@@ -118,9 +110,6 @@ sunmap E
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.DS_Store$']
-let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
 
 "Airline and ColorScheme"
 syntax on
@@ -136,10 +125,8 @@ if !exists("g:airline_symbols")
 endif
 let g:airline_theme="powerlineish"
 let g:airline_powerline_fonts=1
-let g:airline_section_warning = airline#section#create([ "syntastic" ])
 let g:airline#extensions#branch#empty_message  =  "No SCM"
 let g:airline#extensions#whitespace#enabled    =  0
-let g:airline#extensions#syntastic#enabled     =  1
 let g:airline#extensions#tabline#enabled       =  1
 let g:airline#extensions#tabline#tab_nr_type   =  1 " tab number
 let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
