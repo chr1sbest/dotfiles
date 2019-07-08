@@ -6,6 +6,7 @@ export TERM=xterm-256color
 # npm install --global pure-prompt
 autoload -U promptinit; promptinit
 prompt pure
+zstyle :prompt:pure:path color cyan
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
