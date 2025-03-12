@@ -4,6 +4,7 @@ export TERM=xterm-256color
 
 # Install pure prompt https://github.com/sindresorhus/pure
 # npm install --global pure-prompt
+fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:path color cyan
@@ -167,3 +168,7 @@ export PATH=$PATH:$GOROOT/bin
 alias cdpassport="cd ~/go/src/code.justin.tv/identity/passport"
 alias cdinterpol="cd ~/go/src/code.justin.tv/identity/interpol"
 alias cdowl="cd ~/go/src/code.justin.tv/identity/owl"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

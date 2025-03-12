@@ -132,27 +132,3 @@ let g:airline#extensions#tabline#enabled       =  1
 let g:airline#extensions#tabline#tab_nr_type   =  1 " tab number
 let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
 let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
-
-" Add ipdb and rpdb Breakpoints with ease
-python << EOF
-import vim
-import re
-
-ipdb_breakpoint = 'import ipdb; ipdb.set_trace()'
-rpdb_breakpoint = 'import rpdb; rpdb.set_trace()'
-breakpoint_regex = 'import [ir]pdb; [ir]pdb.set_trace()'
-
-def set_breakpoint(breakpoint):
-    breakpoint_line = int(vim.eval('line(".")')) - 1
-    current_line = vim.current.line
-    white_spaces = re.search('^(\s*)', current_line).group(1)
-    vim.current.buffer.append(white_spaces + breakpoint, breakpoint_line)
-
-def remove_all_breakpoints():
-    op = 'g/^.*{}.*/d'.format(breakpoint_regex)
-    vim.command(op)
-
-vim.command('map <leader>b :py set_breakpoint(ipdb_breakpoint)<cr>')
-vim.command('map <leader>r :py set_breakpoint(rpdb_breakpoint)<cr>')
-#vim.command('map <leader>v :py remove_all_breakpoints()<cr>')
-EOF
